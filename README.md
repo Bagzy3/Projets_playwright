@@ -30,12 +30,12 @@ Les tests couvrent :
 ## 📂 Structure du projet
 ```
  ├── 📂 test_description         # Fichiers de description des tests manuels en .md
- │   ├── US1_authentification.md # Description des tests d'authentification
+ │   ├── US1_authentification.md # Description des tests d'authentification ✅
  │   ├── US2_navigation.md       # Description des tests de navigation // ( en construction 👷 )
  │   ├── US3_panier.md           # Description des tests du panier // ( en construction 👷 )
  │   ├── US4_commande.md         # Description des tests de commande // ( en construction 👷 )
  ├── 📂 tests                    # Fichiers des tests automatisés en .js
- │   ├── authentication.spec.js  # Tests automatisés liés à l'authentification
+ │   ├── authentication.spec.js  # Tests automatisés liés à l'authentification ✅
  │   ├── navigation.spec.js      # Tests automatisés liés à la navigation // ( en construction 👷 )
  │   ├── cart.spec.js            # Tests automatisés liés au panier // ( en construction 👷 )
  │   ├── order.spec.js           # Tests automatisés liés au passage de commande // ( en construction 👷 )
