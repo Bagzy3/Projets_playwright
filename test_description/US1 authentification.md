@@ -29,4 +29,24 @@ Se rendre sur le site [Demoblaze](https://www.demoblaze.com).
 
 ---
 
+### Test 02 : Connexion avec un compte valide
+
+#### Description
+Ce test a pour but de vérifier que l’utilisateur peut se connecter avec des identifiants valides sur le site Demoblaze. L'objectif est de s'assurer que le processus d'authentification fonctionne correctement et que l'utilisateur est bien reconnu après la connexion.
+
+#### Préconditions
+Se rendre sur le site [Demoblaze](https://www.demoblaze.com).
+
+---
+
+#### Étapes du test :
+| **Action** | **Données** | **Résultat attendu** |
+|------------|-------------|----------------------|
+| **1.** Cliquer sur le bouton "Log in" situé dans la barre de navigation du site. | - | Une fenêtre pop-up doit s'ouvrir demandant de rentrer le **Username** et le **Password**. |
+| **2.** Entrer le **Username** dans le champ correspondant. Entrer le **Password** dans le champ correspondant. Appuyer sur "Log in". | `Username: test` <br> `Password: test` | Nous sommes redirigés sur la page d'accueil et dans la barre de navigation s'affiche **"Welcome test"**, indiquant que nous sommes connectés. |
+
+---
+
+
+
 
