@@ -29,15 +29,22 @@ Les tests couvrent :
 
 ## 📂 Structure du projet
 ```
-📂 demoblaze-tests
- ├── 📂 tests                 # Contient les fichiers de tests
- │   ├── authentication.spec.js   # Tests liés à l'authentification
- │   ├── navigation.spec.js       # Tests liés à la navigation
- │   ├── cart.spec.js             # Tests liés au panier
- │   ├── order.spec.js            # Tests liés au passage de commande
- ├── README.md                # Documentation du projet
- ├── package.json             # Dépendances et scripts npm
- ├── playwright.config.js      # Configuration Playwright
+ ├── 📂 test_description         # Fichiers de description des tests manuels en .md
+ │   ├── US1_authentification.md # Description des tests d'authentification
+ │   ├── US2_navigation.md       # Description des tests de navigation
+ │   ├── US3_panier.md           # Description des tests du panier
+ │   ├── US4_commande.md         # Description des tests de commande
+ ├── 📂 tests                    # Fichiers des tests automatisés en .js
+ │   ├── authentication.spec.js  # Tests automatisés liés à l'authentification
+ │   ├── navigation.spec.js      # Tests automatisés liés à la navigation
+ │   ├── cart.spec.js            # Tests automatisés liés au panier
+ │   ├── order.spec.js           # Tests automatisés liés au passage de commande
+ ├── .gitignore                  # Liste des fichiers et dossiers à ignorer par Git
+ ├── README.md                   # Documentation du projet
+ ├── package-lock.json           # Verrouillage des versions des dépendances
+ ├── package.json                # Dépendances et scripts npm
+ ├── playwright.config.js         # Configuration Playwright
+
 ```
 
 ## ✅ Cas de tests
@@ -73,7 +80,6 @@ npx playwright test tests/authentication.spec.js
 
 ## 📌 Améliorations futures
 - Ajouter des tests pour les scénarios avancés
-
 ---
 🛠 **Auteur** : PAOLINO Gabin
 📅 **Dernière mise à jour** : 26/03/2025
