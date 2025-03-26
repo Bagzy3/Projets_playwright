@@ -47,6 +47,46 @@ Se rendre sur le site [Demoblaze](https://www.demoblaze.com).
 
 ---
 
+### Test 03 : Connexion avec des identifiants incorrects
+
+#### Description
+Ce test vérifie que lorsqu’un utilisateur saisit des identifiants incorrects (nom d’utilisateur et/ou mot de passe erronés), le système affiche un message d’erreur approprié et refuse la connexion.
+
+#### Préconditions
+Se rendre sur le site [Demoblaze](https://www.demoblaze.com).
+
+---
+
+#### Étapes du test :
+| **Action** | **Données** | **Résultat attendu** |
+|------------|-------------|----------------------|
+| **1.** Cliquer sur le bouton "Log in" situé dans la barre de navigation du site. | - | Une fenêtre pop-up doit s'ouvrir demandant de rentrer le **Username** et le **Password**. |
+| **2.** Entrer le **Username** dans le champ correspondant. Entrer le **Password** dans le champ correspondant. Appuyer sur le bouton "Log in" de la pop-up. | `Username: mauvaisusername` <br> `Password: mauvaispassword` | Une autre fenêtre pop-up nous indique **"User does not exist."** |
+
+---
+
+### Test 04 : Déconnexion de l'utilisateur connecté
+
+#### Description
+Ce test vérifie que lorsqu’un utilisateur connecté clique sur le bouton de déconnexion, il est bien déconnecté et redirigé vers la page d’accueil du site.
+
+#### Préconditions
+1. Être sur le site [Demoblaze](https://www.demoblaze.com).
+2. Être un utilisateur connecté.  
+   Se connecter avec les identifiants suivants :  
+   `Username: test`  
+   `Password: test`
+
+---
+
+#### Étapes du test :
+| **Action** | **Données** | **Résultat attendu** |
+|------------|-------------|----------------------|
+| **1.** Cliquer sur le bouton "Log out" dans la barre de navigation en haut du site. | - | Le bouton "Log in" et "Sign up" doivent réapparaître, indiquant que l'utilisateur est bien déconnecté. |
+
+---
+
+
 
 
 
