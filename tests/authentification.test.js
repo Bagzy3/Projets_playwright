@@ -1,12 +1,12 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
+// US1 : Authentification
 
-test('creation_compte_valide', async ({ page }) =>  {
+test('01_creation_compte_valide', async ({ page }) =>  {
 
     const randomUsername = `user_${Math.floor(Math.random() * 100000)}`;
     const randomPassword = `pass_${Math.floor(Math.random() * 100000)}`;
-
 
     await page.goto('https://www.demoblaze.com/');
 
@@ -27,7 +27,7 @@ test('creation_compte_valide', async ({ page }) =>  {
 
 });
 
-test('connexion_compte_valide', async ({ page }) =>  {
+test('02_connexion_compte_valide', async ({ page }) =>  {
     await page.goto('https://www.demoblaze.com/');
 
     await page.getByRole('link', { name: 'Log in' }).click();
@@ -42,7 +42,7 @@ test('connexion_compte_valide', async ({ page }) =>  {
 
 });
 
-test('connexion_identifiants_incorrects', async ({ page }) =>  {
+test('03_connexion_identifiants_incorrects', async ({ page }) =>  {
     
     const falseusername = `user_${Math.floor(Math.random() * 100000)}`;
     const falsepasseword = `pass_${Math.floor(Math.random() * 100000)}`;
@@ -78,7 +78,7 @@ test('connexion_username_sans_mdp', async ({ page }) => {
 
 });
 
-test('deconnexion', async ({ page }) => {
+test('04_deconnexion', async ({ page }) => {
     await page.goto('https://www.demoblaze.com/');
 
     await page.getByRole('link', { name: 'Log in' }).click();

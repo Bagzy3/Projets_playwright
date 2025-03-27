@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Vérification du filtre des catégories sur Demoblaze', () => {
+test.describe('05 Filtrage des catégories', () => {
 
     test.beforeEach(async ({ page }) => {
         await page.goto('https://www.demoblaze.com/#');
@@ -18,7 +18,7 @@ test.describe('Vérification du filtre des catégories sur Demoblaze', () => {
             await page.click(`text=${category}`);
 
             // Attendre que la liste des produits soit mise à jour
-            await page.waitForTimeout(2000); // Peut être remplacé par un `waitForResponse` plus précis
+            await page.waitForTimeout(2000); 
 
             // Récupérer tous les noms des produits affichés
             const productNames = await page.$$eval('.card-title a', elements => elements.map(el => el.textContent.trim()));
@@ -27,4 +27,45 @@ test.describe('Vérification du filtre des catégories sur Demoblaze', () => {
             expect(productNames.sort()).toEqual(expectedProducts.sort());
         });
     }
+});
+
+test('06_consultation_details_produit', async ({ page }) => {
+    // Aller sur la page d'accueil
+    await page.goto('https://www.demoblaze.com');
+
+    // Attendre que les produits apparaissent
+    await page.waitForSelector('.card-title .hrefch', { timeout: 5000 });
+
+    // Récupérer tous les produits
+    const products = await page.locator('.card-title .hrefch').all();
+    console.log('Nombre de produits trouvés:', products.length);
+    
+    // Vérifier qu'il y a bien des produits sur la page
+    expect(products.length).toBeGreaterThan(0);
+
+    // Sélectionner un produit au hasard
+    const randomIndex = Math.floor(Math.random() * products.length);
+    await products[randomIndex].click();
+
+    // Attendre que la page de détails charge
+    await page.waitForSelector('.name', { timeout: 5000 });
+
+    // Vérifier que l'URL contient bien l'ID du produit
+    const url = page.url();
+    expect(url).toContain('prod.html?idp_=');
+
+    // Récupérer le nom du produit
+    const productName = await page.locator('.name').innerText();
+    console.log('Nom du produit sélectionné:', productName);
+
+    // Récupérer le nom de l'image
+    const imageSrc = await page.locator('#myCarousel-2 .carousel-inner img').first().getAttribute('src');
+    console.log('Nom de l\'image du produit:', imageSrc);
+
+    // Vérifier l'affichage des détails du produit
+    await expect(page.locator('.name')).toBeVisible(); // Nom
+    await expect(page.locator('.price-container')).toBeVisible(); // Prix
+    await expect(page.locator(`img[src="${imageSrc}"]`)).toBeVisible(); // Image correspondante réucpérée
+    await expect(page.locator('.description')).toBeVisible(); // Description
+    await expect(page.locator('.btn-success')).toHaveText('Add to cart'); // Bouton "Add to cart"
 });
