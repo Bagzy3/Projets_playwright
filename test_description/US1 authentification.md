@@ -44,7 +44,7 @@
 
 ---
 
-### **🔹 Test 03 : Connexion avec des identifiants incorrects**  
+### **🔹 Test 03 : Connexion avec des identifiants incorrects / Compte non enregistré **  
 
 #### **Description**  
 🎯 *Vérifier que la connexion échoue et qu’un message d'erreur s’affiche lorsque les identifiants sont erronés.*  
