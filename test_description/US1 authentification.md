@@ -23,7 +23,7 @@
 | **Action** | **Données** | **Résultat attendu** |
 |------------|-------------|----------------------|
 | **1.** Cliquer sur le bouton `Sign up` dans la barre de navigation du site. | - | Une fenêtre pop-up s'affiche avec deux champs : **"Username"** et **"Password"**. |
-| **2.** Saisir un **Username** et un **Password**, puis appuyer sur `Sign up`. | `Username: test1234test`<br>`Password: test1234test` | Une pop-up s'affiche indiquant : **"Sign up successful."** |
+| **2.** Saisir un **Username** et un **Password**, puis appuyer sur `Sign up`. | `Username: test1234test`<br>`Password: test1234test` ( si l’utilisateur est déja pris, ajouter un chiffre a la fin du username jusqu’a que l’utilisateur soit libre : exemple : "test1234test1" )| Une pop-up s'affiche indiquant : **"Sign up successful."** |
 
 ---
 
