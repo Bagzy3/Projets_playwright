@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 test.describe('05 Filtrage des catégories', () => {
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('https://www.demoblaze.com/#');
+        await page.goto('https://www.demoblaze.com');
     });
 
     const categories = {
