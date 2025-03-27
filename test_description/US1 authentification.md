@@ -66,6 +66,9 @@
 🎯 *Vérifier que l’utilisateur peut se déconnecter correctement.*  
 
 #### **Préconditions**  
+
+📍 Se rendre sur le site [Demoblaze](https://www.demoblaze.com).  
+
 📍 Être connecté sur le site avec :  
 🔑 `Username: test`  
 🔑 `Password: test`  
