@@ -47,7 +47,7 @@
 ### **🔹 Test 03 : Connexion invalide : identifiants incorrects / Compte non enregistré **  
 
 #### **Description**  
-🎯 *Vérifier que la connexion échoue et qu’un message d'erreur s’affiche lorsque les identifiants sont erronés.*  
+🎯 *Vérifier que la connexion échoue et qu’un message d'erreur s’affiche lorsque les identifiants sont erronés ou que le compte n'est pas enregistré.*  
 
 #### **Préconditions**  
 📍 Se rendre sur le site [Demoblaze](https://www.demoblaze.com).  
