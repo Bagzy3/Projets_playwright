@@ -56,7 +56,7 @@
 | **Action** | **Données** | **Résultat attendu** |
 |------------|-------------|----------------------|
 | **1.** Cliquer sur le bouton `Log in`. | - | Une pop-up s'affiche avec **"Username"** et **"Password"**. |
-| **2.** Entrer des identifiants erronés et appuyer sur `Log in`. | `Username: fauxuser`<br>`Password: fauxpass` | Une pop-up affiche **"User does not exist."** |
+| **2.** Entrer des identifiants erronés et appuyer sur `Log in`. | `Username: fauxusername`<br>`Password: fauxpassword` | Une pop-up affiche **"User does not exist."** |
 
 ---
 
