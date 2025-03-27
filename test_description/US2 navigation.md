@@ -38,4 +38,5 @@
 | **Action** | **Données** | **Résultat attendu** |
 |------------|-------------|----------------------|
 | **1.** Cliquer sur un produit affiché sur la page d’accueil. | - | La page de détails du produit sélectionné s'affiche dans l'URL : `https://www.demoblaze.com/prod.html?idp_=(ID DU PRODUIT)` |
-| **2.** Vérifier l'affichage des informations suivantes : | - | Le nom, l'image, la description, le prix du produit et le bouton "Add to cart" sont visibles et correspondent au produit sélectionné. |
+| **2.** Vérifier l'affichage des informations suivantes : | - | Le **nom**, l'**image**, la **description**, le **prix du produit** et le **bouton "Add to cart"** sont visibles et correspondent au produit sélectionné. |
+
